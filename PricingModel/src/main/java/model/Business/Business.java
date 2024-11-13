@@ -42,6 +42,7 @@ public class Business {
     UserAccountDirectory useraccountdirectory;
     MarketingPersonDirectory marketingpersondirectory;
 
+    // Business constructor
     public Business(String n) {
         name = n;
         masterorderlist = new MasterOrderList();
