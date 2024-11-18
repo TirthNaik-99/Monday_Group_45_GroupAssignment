@@ -34,7 +34,6 @@ public class Order {
         status = "in process";
     }
 
-
     public Order(CustomerProfile cp, SalesPersonProfile ep) {
         orderitems = new ArrayList();
         customer = cp;
@@ -47,6 +46,7 @@ public class Order {
         orderitems.add(oi);
         return oi;
     }
+    
     //order total is the sumer of the order item totals
     public int getOrderTotal() {
         int sum = 0;
@@ -58,10 +58,12 @@ public class Order {
 
     public int getOrderPricePerformance() {
         int sum = 0;
+        
         for (OrderItem oi : orderitems) {
             sum = sum + oi.calculatePricePerformance();     //positive and negative values       
         }
         return sum;
+        
     }
 
     public int getNumberOfOrderItemsAboveTarget() {

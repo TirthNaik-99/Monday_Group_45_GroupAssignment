@@ -11,7 +11,6 @@ public class MasterOrderReport {
     ArrayList<OrderSummary> ordersummarylist;
     
     public MasterOrderReport(){
-        
         ordersummarylist = new ArrayList();
         
     }
@@ -20,6 +19,7 @@ public class MasterOrderReport {
         OrderSummary ordersummary ;
         for(Order order: orderlist){
             ordersummary = new OrderSummary(order);
+            
             ordersummarylist.add(ordersummary);
         }         
     }
@@ -35,6 +35,8 @@ public class MasterOrderReport {
             }
                 }
         return currenttoporder;
+        
+        
     }
 }
 
