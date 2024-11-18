@@ -18,7 +18,17 @@ import model.Personnel.Person;
 public class CustomerProfile {
     ArrayList<Order> orders;
     ArrayList<Market> markets;
-    
+
+    public int getOrdersize() {
+        return Ordersize;
+    }
+
+//setOrdersize
+    public void setOrdersize(int Ordersize) {
+        this.Ordersize = Ordersize;
+    }
+   int Ordersize;
+   
     Person person;
 
     public CustomerProfile(Person p) {

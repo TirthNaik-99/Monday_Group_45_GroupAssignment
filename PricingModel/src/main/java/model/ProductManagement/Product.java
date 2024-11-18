@@ -14,9 +14,19 @@ import model.OrderManagement.OrderItem;
  * @author kal bugrara
  */
 public class Product {
+
+    public String getName() {
+        return name;
+    }
     private String name;
     private int floorPrice;
     private int ceilingPrice;
+
+    public void setTargetPrice(int targetPrice) {
+        this.targetPrice = targetPrice;
+        
+        
+    }
     private int targetPrice;
     ArrayList<OrderItem> orderitems;
         public Product( int fp, int cp, int tp) {
@@ -42,6 +52,13 @@ public class Product {
     public int getTargetPrice() {return targetPrice;}
     public void addOrderItem(OrderItem oi){     
         orderitems.add(oi);
+    }
+    
+    
+     
+
+    public ArrayList<OrderItem> getOrderItems() {
+        return orderitems;
     }
     //Number of item sales above target 
     public int getNumberOfProductSalesAboveTarget(){
@@ -88,6 +105,15 @@ public class Product {
     public void setName(String n){
         name = n;
     }
+    
+    
+    public double getTotalRevenue() {
+    double revenue = 0.0;
+    for (OrderItem oi : orderitems) {
+        revenue += oi.getOrderItemTotal(); // Assuming getOrderItemTotal() returns price × quantity
+    }
+    return revenue;
+}
     @Override
     public String toString(){
         return name;

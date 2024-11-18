@@ -120,6 +120,12 @@ public class OrderAreaPanel extends javax.swing.JPanel {
             }
         });
 
+        txtCustomer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCustomerActionPerformed(evt);
+            }
+        });
+
         jLabel6.setText("order Item");
 
         tblOrderItem.setModel(new javax.swing.table.DefaultTableModel(
@@ -395,7 +401,7 @@ public class OrderAreaPanel extends javax.swing.JPanel {
     // Reset fields if necessary
     txtQuantity.setText("");
     txtActualPrice.setText("");
-    txtSuggestedAP.setText("");
+   // txtSuggestedAP.setText("");
         
      
     }//GEN-LAST:event_btnSubmitActionPerformed
@@ -403,7 +409,7 @@ public class OrderAreaPanel extends javax.swing.JPanel {
     
     private Product findProductByName(String productName) {
     for (Product product : productCatalog.getProductList()) {
-        if (product.getName().equalsIgnoreCase(productName)) {
+          if (product.getName().equalsIgnoreCase(productName)) {
             return product;
         }
     }
@@ -524,6 +530,10 @@ public class OrderAreaPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         populateBusinessIntelligenceFields();
     }//GEN-LAST:event_btnGenerateBIActionPerformed
+
+    private void txtCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCustomerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCustomerActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
