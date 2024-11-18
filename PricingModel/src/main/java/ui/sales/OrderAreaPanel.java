@@ -375,7 +375,7 @@ public class OrderAreaPanel extends javax.swing.JPanel {
         txtQuantity.setText("");
         txtActualPrice.setText("");
         txtProduct.setText("");
-        txtSuggestedAP.setText("");
+        //txtSuggestedAP.setText("");
         txtFAT.setText("");
         txtFBT.setText("");
         txtSales.setText("");
@@ -667,7 +667,7 @@ DefaultTableModel model = (DefaultTableModel) tblProduct.getModel(); // tblProdu
 
     // Display product name and calculated suggested actual price
     txtProduct.setText(productName);
-    txtSuggestedAP.setText(String.format("%.2f", suggestedActualPrice)); 
+    //txtSuggestedAP.setText(String.format("%.2f", suggestedActualPrice)); 
 
 
 

@@ -248,7 +248,7 @@ public class ProductReviewPanel extends javax.swing.JPanel {
         }
 
         // Display the result in the analysis text field
-        txtAnalysis.setText(result);
+        //txtAnalysis.setText(result);
     }
 }
 
