@@ -394,14 +394,14 @@ public class ConfigureABusiness {
             product.setName(uniqueProductName);
 
             ProductSummary productSummary = new ProductSummary(product);
-            System.out.println("    Product: " + product.getProductName());
+            System.out.println("    Product: " + product.getName());
             System.out.println("        Sales Volume: " + productSummary.getSalesRevenues());
             System.out.println("        Profit Margin: " + productSummary.getProductPricePerformance());
             System.out.println("        Frequency above target: " + productSummary.getNumberAboveTarget());
             System.out.println("        Frequency below target: " + productSummary.getNumberBelowTarget());
 
             // Generate 10 orders per product and display them
-            System.out.println("        Orders for " + product.getProductName() + ":");
+            System.out.println("        Orders for " + product.getName() + ":");
 
             for (int i = 0; i < 10; i++) {
                 // Get the same customer for this cycle of 10 orders
