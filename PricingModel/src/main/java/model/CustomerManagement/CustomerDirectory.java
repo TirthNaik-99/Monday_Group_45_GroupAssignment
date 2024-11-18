@@ -26,6 +26,14 @@ public class CustomerDirectory {
 
     }
 
+    public ArrayList<CustomerProfile> getCustomerlist() {
+        return customerlist;
+    }
+
+    public void setCustomerlist(ArrayList<CustomerProfile> customerlist) {
+        this.customerlist = customerlist;
+    }
+
     public CustomerProfile newCustomerProfile(Person p) {
 
         CustomerProfile sp = new CustomerProfile(p);
